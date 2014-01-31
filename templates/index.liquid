@@ -1,0 +1,192 @@
+{% comment %}
+Re-use the 'rte' class wherever you output content that was added by a merchant using
+the Rich Text Editor ( 'rte' stands for rich text editor ).
+Style all HTML elements in that content the same way across the board.
+Use the 'rte' class in your CSS to help maintain that consistency.
+Example: the h2 element should have the same size and color in:
+- product descriptions
+- collection descriptions
+- 'page' pages' content
+- blog post
+{% endcomment %}
+
+{% assign page = pages.frontpage %}
+
+<div>
+	<div class="flexslider" id="main-slider">
+  <ul class="slides">
+    <li>
+      <img src="{{ 'berkeley02.jpg' | asset_url }}" />
+    </li>
+    <li>
+      <img src="{{ 'berkeley03.jpg' | asset_url }}" />
+    </li>
+    <li>
+      <img src="{{ 'berkeley04.jpg' | asset_url }}" />
+    </li>
+    <li>
+      <img src="{{ 'berkeley01.jpg' | asset_url }}" />
+    </li>
+  </ul>
+</div>
+</div>
+
+<div class="about text-center">
+  <div class="about-wrap">
+    <h2>About</h2>
+  	<p>Berkeley Supply is an American Made Goods Shop Specializing In Menswear Located on Historic Tennyson Street In The Berkeley District Of Denver's Highlands.</p>
+  </div>
+</div>
+
+<div class="brands-wrap text-center">
+  <h2>Brands</h2>
+  <div class="slider-wrap">
+    <div class="lefter"></div>
+    <div class="righter"></div>
+    <div class="flexslider" id="brands">
+      <ul class="slides">
+        <li class="brand">
+          <img src="{{ 'archival.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'chippewas.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'duexmachine.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'fieldnotes.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'ironair.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'jh.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'shinola.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'strawfoot.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'west_america.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'winter_session.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'woolrich.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'ballandbuck.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'filson.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'forest_river.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'imogene.png' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'red_wing.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'rogue.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'freeman.png' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'leftField.png' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'stormy.png' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'tanner_logo.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'taylor_stich.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'tellason.png' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'the_west.jpg' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'topo.png' | asset_url }}" />
+        </li>
+        <li class="brand">
+          <img src="{{ 'wolverine.png' | asset_url }}" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="visit-text" class="visit-text text-center">
+    <h2>Visit</h2>
+   <div class="visit-wrap">
+    <div class="hours third">
+      <b>Hours</b> </br>
+      11AM —  6PM &nbsp; &nbsp;  TUE — SAT<br>
+      CLOSED SUN & MON
+    </div>
+    <div id="address" class="third">
+      <a href="https://www.google.com/maps/preview#!q=berkeley+supply&data=!4m10!1m9!4m8!1m3!1d3218!2d-105.0442219!3d39.7748442!3m2!1i1435!2i806!4f13.1" target="_blank">
+      4405 West 43rd Ave </br>
+      Denver, Colorado 80212
+    </a>
+      <div id="phone">
+        720 . 445 . 6818
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rte front">
+  {{ page.content }}
+</div>
+
+<footer id="footer" class="text-center">
+  <div id="social">
+  	<div class="social-icon">
+  		<a href="mailto:eli@berkeleysupply.com" target="_blank">Email
+  		</a>
+  	</div>
+  	<div class="social-icon">
+    	<a href="//www.facebook.com/BerkeleySupplyCO?fref=ts" target="_blank">Facebook</a>
+   	</div>
+   	<div class="social-icon">
+    	<a href="//twitter.com/BerkeleySupply/statuses/273145572674899968" target="_blank">Twitter</a>
+    </div>
+    <div class="social-icon">
+      <a href="//instagram.com/berkeleysupply" target="_blank">Instagram</a>
+     </div>
+	</div>
+  <div class="copyright">
+    <p role="contentinfo">&copy; {{ shop.name }}</p>
+  </div>
+  <span class="credit"><a href="http://davelehl.com/" target="_blank">✔</a>
+  <span class="credit"><a href="http://cirrously.com" target="_blank">☁</a></span>
+</footer> 
+
+<div id="map_canvas" style="width:100%; height:100%"></div>
+
+
+
+{% comment %}
+{% assign collection = collections.frontpage %}
+
+<ul class="grid clearfix">
+{% for product in collection.products %}
+  {% include 'product-grid-item' with 'three-per-row' %}
+{% else %}
+<p>You have no products in your Frontpage collection. <a href="http://www.shopify.com/admin/custom_collections">Add some.</a></p>
+{% endfor %}
+</ul>
+{% endcomment %}

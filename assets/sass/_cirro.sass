@@ -1,0 +1,394 @@
+//  CIRRO CUSTOM SASS
+// ----------------------------------------------------------------------------
+
+#loader
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: white
+	background-image: url(logo_lg.png), url(loader.gif)
+	background-repeat: no-repeat
+	background-position: center center, 49.5% 70%
+	background-size: 200px, auto
+
+#welcome .container
+	padding: 0
+
+.container
+	width: 100%
+	margin-top: 85px
+	padding-bottom: 100px
+
+.cart-container
+	width: 95%
+	max-width: 900px
+	margin: 0 auto
+
+.header
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	height: 85px
+	width: 100%
+	background: white
+	background: rgba(255,255,255,0.7)
+	z-index: 500
+	padding: 30px 0
+	letter-spacing: 0.1em
+	.header-inner
+		position: relative
+		width: 95%
+		max-width: 1500px
+		margin: 0 auto
+		font-size: 13px
+		ul.left-nav
+			margin: 0
+			list-style: none
+			li
+				display: inline
+				margin-right: 40px
+				a
+					color: black
+					text-transform: uppercase
+					font-weight: 700
+		ul.right-nav
+			margin: 0
+			list-style: none
+			position: relative
+			top: -8px
+			li
+				float: right
+				margin-left: 40px
+				a
+					color: black
+					text-transform: uppercase
+					font-weight: 700
+			.entypo.cart-icon
+				-webkit-font-smoothing: antialiased
+				margin-right: 10px
+				font-size: 30px
+			.cart-count
+				position: relative
+				top: -1px
+		#logo
+			position: absolute
+			left: 50%
+			width: 180px
+			margin-left: -90px
+			top: -10px
+
+.remove
+	font-size: 35px
+	color: $black
+	&:visited
+		color: $black
+	&:hover
+		text-decoration: none
+		color: $blue
+
+.subtotal
+	text-align: left
+	margin: 50px 0 30px
+	font-size: 20px
+
+.checkout-icon
+	font-size: 50px
+
+.store-title
+	text-align: center
+	margin: 100px 0
+
+.grid
+	margin: 0
+	padding: 0
+	.four-per-row
+		width: 25%
+		float: left
+		list-style: none
+		.prod-inner
+			padding: 15px
+			position: relative
+			a.prod-wrap
+				text-decoration: none
+				position: relative
+				display: block
+				&:hover
+					.prod-image-wrap
+						img.prod-one
+							opacity: 0
+						img.prod-two
+							opacity: 1
+					.prod-hover
+						opacity: 1
+						.prod-title
+							top: 30px
+						.prod-price
+							bottom: 30px
+				.prod-image-wrap
+					position: relative
+					img
+						width: 100%
+						&.prod-one
+							opacity: 1
+						&.prod-two
+							position: absolute
+							top: 0
+							left: 0
+							opacity: 0
+				.prod-hover
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					background: black
+					background: rgba(0,0,0,0.6)
+					opacity: 0
+					color: white
+					+transition(0.5s)
+					.prod-title
+						position: absolute
+						top: -20px
+						left: 20px
+						font-size: 17px
+						letter-spacing: 0.1em
+						+transition(0.3s)
+					.prod-price
+						position: absolute
+						bottom: -20px
+						left: 20px
+						font-size: 17px
+						letter-spacing: 0.1em
+						+transition(0.3s)
+
+.product-types
+	padding: 20px 35px
+	background: #efefef
+	text-align: center
+	font-size: 13px
+	span:last-child
+		display: none
+	a
+		color: black
+		&.current
+			color: $red
+	.spacer
+		margin: 0 15px
+
+.collection-title
+	padding: 20px 35px
+	text-align: center
+	font-weight: 700
+	text-transform: uppercase
+	border-bottom: 1px solid #DDD
+	margin-bottom: 16px
+	letter-spacing: 0.1em
+	font-size: 18px
+
+.left,
+.right
+	position: fixed
+	z-index: 100
+	bottom: 20px
+	font-size: 20px
+	a:hover
+		text-decoration: none
+
+.left
+	left: 20px
+
+.right
+	right: 20px
+
+.prod-deets
+	position: fixed
+	top: 150px
+	left: 30px
+	width: 95%
+	max-width: 350px
+	.product-vendor
+		a
+			color: #aaa
+			font-style: italic
+
+.more-desc
+	display: inline-block
+	font-weight: bold
+	font-size: 25px
+	+transition(0.3s)
+	cursor: pointer
+	margin-top: 15px
+	&.open
+		+transform(rotate(45deg))
+
+#product-description
+	font-size: 12px
+	line-height: 1.2
+	height: 0px
+	overflow: hidden
+	+transition(height 0.3s)
+	&.open
+		height: auto
+.photo-wrap
+	overflow: hidden
+	.prod-photos
+		float: right
+		margin: 47px 30px 0 0
+		width: 68%
+		.prod-img
+			margin: 20px 0
+			img
+				width: 100%
+
+#product-price
+	margin: 15px 0 5px
+	font-weight: 700
+
+.about
+	background: #EFEFEF
+	padding: 100px 0
+	h2
+		margin: 0 auto 30px
+		border-bottom: 2px solid #ccc
+		width: 150px
+		padding-bottom: 30px
+	.about-wrap
+		width: 95%
+		max-width: 600px
+		margin: 0 auto
+		overflow: hidden
+	p
+		font-size: 21px
+		line-height: 1.6
+
+.brands-wrap
+	overflow: hidden
+	padding: 100px 0
+	h2
+		margin: 0 auto 30px
+		border-bottom: 2px solid #eee
+		width: 150px
+		padding-bottom: 30px
+	.slider-wrap
+		position: relative
+		width: 90%
+		margin: 0 auto
+		.lefter
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			width: 8%
+			z-index: 200
+			background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)))
+			background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+			background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+			background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+			background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 )
+		.righter
+			position: absolute
+			right: 0
+			top: 0
+			bottom: 0
+			width: 8%
+			z-index: 200
+			background: -moz-linear-gradient(right,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+			background: -webkit-gradient(linear, right top, left top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)))
+			background: -webkit-linear-gradient(right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+			background: -o-linear-gradient(right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+			background: -ms-linear-gradient(right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+			background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 )
+		.brand
+			float: left
+			width: 20%
+
+
+.visit-text
+	background: #EFEFEF
+	padding: 100px 0
+	h2
+		margin: 0 auto 30px
+		border-bottom: 2px solid #ccc
+		width: 150px
+		padding-bottom: 30px
+	.visit-wrap
+		width: 95%
+		max-width: 600px
+		margin: 0 auto
+		overflow: hidden
+		.hours
+			float: left
+			text-align: left
+			font-size: 20px
+			line-height: 1.6
+		#address
+			float: right
+			text-align: right
+			font-size: 20px
+			line-height: 1.6
+
+#pagination
+	margin-top: 50px
+	padding: 20px 5%
+	text-align: center
+	border-top: 1px solid #ccc
+	.page
+		margin: 0 10px
+		&.current
+			color: $red
+			border-bottom: 1px solid
+
+footer
+	background: #231f20
+	color: white
+	-webkit-font-smoothing: antialiased
+	padding: 70px 30px 50px 30px
+	position: relative
+	overflow: hidden
+	.credit a
+		color: white
+		float: right
+		display: block
+		width: 30px
+		margin-right: 15px 
+		font-size: 20px
+		+transition(1s)
+		&:hover
+			text-decoration: none
+			color: $red
+			+transform(rotate(360deg))
+	#social
+		float: left
+		.social-icon
+			float: left
+			margin-right: 40px
+			a
+				color: white
+				text-transform: uppercase
+				font-weight: 700
+	.copyright
+		float: right
+
+.cart-wrap
+	margin-top: 8px
+
+.cart-title
+	padding: 20px 35px
+	background: #efefef
+	text-align: center
+	margin-bottom: 50px
+
+.continue
+	margin-bottom: 50px
+	font-size: 18px
+	
+.icon
+	font-family: monospace
+	font-size: 15px
+

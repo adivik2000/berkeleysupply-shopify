@@ -1,0 +1,110 @@
+// REPEAT VARIABLES & MIXINS
+// ----------------------------------------------------------------------------
+
+@import "variables"
+@import "mixins"
+
+.clearfix
+	*zoom: 1
+	&:before
+		display: table
+		line-height: 0
+		content: ""
+	&:after
+		display: table
+		line-height: 0
+		content: ""
+		clear: both
+
+.input-block-level
+	display: block
+	width: 100%
+	min-height: 30px
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+.visible-phone, .visible-tablet, .hidden-desktop
+	display: none !important
+
+.visible-desktop
+	display: inherit !important
+
+@media (min-width: 768px) and (max-width: 979px)
+	.hidden-desktop
+		display: inherit !important
+	.visible-desktop
+		display: none !important
+	.visible-tablet
+		display: inherit !important
+	.hidden-tablet
+		display: none !important
+
+@media (max-width: 767px)
+	.hidden-desktop
+		display: inherit !important
+	.visible-desktop
+		display: none !important
+	.visible-phone
+		display: inherit !important
+	.hidden-phone
+		display: none !important
+
+@media (min-width: 1200px)
+
+
+@media (min-width: 768px) and (max-width: 979px)
+
+
+@media (max-width: 767px)
+	.header
+		position: relative
+		height: 140px
+	.container
+		margin-top: 0
+	body
+		padding: 0
+	.dl-horizontal
+		dt
+			float: none
+			width: auto
+			clear: none
+			text-align: left
+		dd
+			margin-left: 0
+	.prod-deets
+		position: relative
+		top: 0
+		left: 10px
+		width: 98%
+		max-width: 98%
+		border-top: 1px solid #ddd
+		margin-top: 10px
+		padding-top: 15px
+	.grid .four-per-row
+		width: 50%
+	.grid .four-per-row .prod-inner a.prod-wrap .prod-hover .prod-title
+		font-size: 13px
+	.header .header-inner ul.left-nav,
+	.header .header-inner ul.right-nav
+		margin-top: 70px
+	.visit-text .visit-wrap .hours,
+	.visit-text .visit-wrap #address
+		float: none
+		text-align: center
+		margin-bottom: 20px
+	footer #social
+		margin-bottom: 20px
+	footer .copyright
+		float: left
+	.photo-wrap .prod-photos
+		float: none
+		width: 98%
+		margin: 20px auto 0
+
+	
+@media (max-width: 480px)
+	.slide-window
+		height: 250px
+
+
